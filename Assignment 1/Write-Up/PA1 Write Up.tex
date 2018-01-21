@@ -1,0 +1,58 @@
+%Do not change 
+\documentclass[12pt, oneside]{article}
+\usepackage{amssymb,amsmath}
+\usepackage[margin=1in]{geometry}
+\usepackage{textpos}
+
+% You may add the packages you need here
+
+
+
+\begin{document}
+%% Do not modify 
+%\begin{textblock*}{3cm}(-1.7cm,-2.6cm)
+%\noindent {\scriptsize Staple here!} 
+%\end{textblock*}
+
+%Do not modify
+\begin{textblock*}{4cm}(-1.7cm,-2.3cm)
+\noindent {\scriptsize TTIC 31050 Winter 2018} 
+\end{textblock*}
+
+%Do not modify other than putting your name where stated
+\begin{textblock*}{8cm}(12.5cm,-1cm)
+\noindent {Name: Graham Northrup} 
+\end{textblock*}
+%Do not modify other than putting your section (1 or 2) where stated
+\begin{textblock*}{3cm}(12.5cm,-0.5cm)
+\noindent {Section: 1} 
+\end{textblock*}
+%Do not modify other than typing your acknowledgement where stated
+%\begin{textblock*}{13.5cm}(-1.7cm,-1.8cm)
+%\noindent \textit{\footnotesize Acknowledgement: Your acknowledgement for collaboration and other sources goes here. } 
+%\end{textblock*}
+
+\vspace{1cm}
+
+%Do not modify other than typing the homework number after #
+\begin{center}
+\textbf{\Large TTIC 31050 \# 1}
+\end{center}
+
+
+%Rest should contain your solution for the homework. Feel free to improvise in ways that you believe make grading easier.
+\subsection*{1}
+I completed this task in python. I only have the final alignments of the benchmark sequences in my file, but it was tested on several shorter sequences.
+
+
+
+\subsection*{2}
+Unfortunately the sequence I have selected has some similar strings along it, which appear to be fooling my implementations. I'm scoring 0\% accurate in both cases, which is due to the gaps in my implementation not appearing in the same places as the ground truth.
+
+\subsection*{3}
+My local alignment is successfully identifying 100\% identical subsequences, unfortunately they don't appear in the same places along the two sequences resulting in a score of 0. As stated above my global alignment is also not performing very well.
+
+\subsection*{4} 
+Due to the already 0 scores for my implementations, changing to an affine gap penalty doesn't have a quantitative effect on the alignment score. However, a manual examination shows what we would expect. Increasing the penalty to open gaps decreases the number of gaps, increasing the penalty to keep a gap open decreasing the lengths of the gaps present.
+
+\end{document}

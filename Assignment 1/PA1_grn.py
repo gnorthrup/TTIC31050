@@ -1,5 +1,6 @@
-#This file produces the code for the first assignment of TTIC 301
+#This file produces the code for the first assignment of TTIC 31050
 #Graham Northrup
+#Usage python PA1_grn.py
 
 import numpy as np
 
