@@ -87,14 +87,14 @@ def main():
 	dssp_dict = {}
 	pro_list = []
 
-	for file in os.listdir(SPIDER_PATH):
+	for file in os.listdir(SPIDER_PATH): #Get spiders
 		#print(SPIDER_PATH + file)
 		SS = read_SPIDER2(SPIDER_PATH + file)
 		fields = file.split("_")
 		spider_dict[fields[0]] = SS 
 		pro_list.append(fields[0])
 
-	for folder in os.listdir(RAPTOR_PATH):
+	for folder in os.listdir(RAPTOR_PATH): #get raptors
 		if (folder == '.DS_Store'):
 			continue
 		path = RAPTOR_PATH + folder + '/'
@@ -106,7 +106,7 @@ def main():
 		SS = SS.strip('\n')
 		raptor_dict[folder] = SS
 
-	for file in os.listdir(DSSP_PATH):
+	for file in os.listdir(DSSP_PATH): #get dssps
 		code = file.split('_')[0]
 		if (code == '5a7d'):
 			SS = read_DSSP(DSSP_PATH + file, 'B')
@@ -132,7 +132,7 @@ def main():
 	scores = np.zeros([2,15])
 	#[0][1:16] = pro_list
 
-	for i, pro in enumerate(pro_list):
+	for i, pro in enumerate(pro_list): #get Q3s
 		check1 = dssp_dict[pro]
 		check2 = spider_dict[pro]
 		check3 = raptor_dict[pro]
